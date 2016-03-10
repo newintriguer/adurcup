@@ -1,0 +1,36 @@
+
+<div class="container">
+	<div class="row">
+		<form class="navbar-form navbar-left" role="search">
+	    <div class="form-group">
+	        <input type="text" class="form-control" placeholder="Search" ng-model='query'>
+	    </div>
+	    <button type="submit" class="btn btn-default" ng-click="submitSearch()">
+	    	<span class="glyphicon glyphicon-search"></span>
+	    </button>
+		</form>
+	</div>
+	<div class="row">
+		<div class="col-md-4" ng-repeat="item in searchedData" style="background:white; border:solid 1px black;" >
+			<div>
+				<b>Images:</b>
+				<div ng-repeat='img in item.image_src'>
+					<img src="{{img}}">
+				</div>
+			</div>
+			<div><b>Name:</b>{{item.name}}</div>
+			<div><b>Category:</b>{{item.category}}</div>
+			<div><b>description:</b>{{item.description}}</div>
+			<div><b>min_quantity:</b>{{item.min_quantity}}</div>
+			<div><b>initial_cost:</b>{{item.initial_cost}}</div>
+			<div><b>price_per_unit:</b>{{item.price_per_unit}}</div>
+			<div><b>color:</b>{{item.color}}</div>
+			<div><b>customizable:</b>{{item.customizable}}</div>
+			<div><b>types:</b>{{item.types}}</div>
+			<div><b>sizes:</b>{{item.sizes}}</div>
+			<div><b>delivery:</b>{{item.delivery}}</div>
+			<div><b>unit_description:</b>{{item.unit_description}}</div>
+			<div><b>advertisement:</b>{{item.advertisement}}</div>
+		</div>
+	</div>
+</div>
